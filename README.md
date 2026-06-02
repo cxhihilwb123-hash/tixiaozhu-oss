@@ -17,6 +17,20 @@ This repository is licensed under GNU Affero General Public License v3.0 or late
 - Built-in audits for question-bank quality, product readiness, runtime security, commercial launch readiness, and production bundle residue.
 - Production launch posture that explicitly blocks unsafe defaults instead of pretending local development is production-ready.
 
+## Screenshots
+
+Student learning dashboard:
+
+![Student learning dashboard](docs/assets/screenshots/student-home.png)
+
+Question store and primary-subject pack system:
+
+![Question store](docs/assets/screenshots/question-store.png)
+
+Operations admin dashboard:
+
+![Admin dashboard](docs/assets/screenshots/admin-dashboard.png)
+
 ## Current Baseline
 
 Recent local validation for this release baseline:
@@ -122,6 +136,8 @@ docs/       launch, database, testing, architecture, and maintenance docs
 
 More detail: [docs/architecture.md](docs/architecture.md).
 
+API overview: [docs/api-reference.md](docs/api-reference.md).
+
 ## Environment Files
 
 Real secrets must not be committed. Use deployment secrets or ignored local files.
@@ -213,4 +229,4 @@ Please do not disclose vulnerabilities publicly before contacting the maintainer
 
 Tixiaozhu is licensed under GNU Affero General Public License v3.0 or later.
 
-You may use, modify, distribute, and run the project under AGPL terms. Proprietary commercial licensing is available separately; see [COMMERCIAL.md](COMMERCIAL.md).
+You may use, modify, distribute, and run the project under AGPL terms. Proprietary commercial licensing is available separately; see [COMMERCIAL.md](COMMERCIAL.md) and [docs/license-faq.md](docs/license-faq.md).
