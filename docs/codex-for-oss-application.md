@@ -43,3 +43,4 @@ The repository is newly public, so it may not yet have stars or downloads. Its e
 - Open roadmap issues.
 - Clear AGPL license and optional commercial licensing note.
 - Sanitized screenshots or demo video once available.
+- Reviewer outreach with honest external feedback, not fake stars or inflated adoption claims.

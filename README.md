@@ -138,6 +138,8 @@ More detail: [docs/architecture.md](docs/architecture.md).
 
 API overview: [docs/api-reference.md](docs/api-reference.md).
 
+Visual walkthrough: [docs/demo.md](docs/demo.md).
+
 ## Environment Files
 
 Real secrets must not be committed. Use deployment secrets or ignored local files.
@@ -219,7 +221,7 @@ See [docs/production-launch-runbook.md](docs/production-launch-runbook.md) and [
 
 ## Contributing
 
-Contributions are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), [ROADMAP.md](ROADMAP.md), and [docs/testing.md](docs/testing.md).
+Contributions are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), [ROADMAP.md](ROADMAP.md), [MAINTAINERS.md](MAINTAINERS.md), [docs/testing.md](docs/testing.md), and [docs/question-bank-contributing.md](docs/question-bank-contributing.md).
 
 ## Security
 
