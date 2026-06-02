@@ -1,0 +1,36 @@
+{
+  "name": "tixiaozhu",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Source-available Chinese education-product engineering sample for practice, question banks, admin operations, and launch-readiness audits.",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "dev:api": "npm --prefix backend run dev",
+    "dev:web": "npm --prefix frontend run dev",
+    "dev:admin": "npm --prefix admin run dev",
+    "build": "npm --prefix frontend run build && npm --prefix admin run build",
+    "check:api": "npm --prefix backend run health",
+    "db:local:start": "docker rm -f tixiaozhu-postgres-local >/dev/null 2>&1 || true; docker run -d --name tixiaozhu-postgres-local -e POSTGRES_DB=tixiaozhu -e POSTGRES_USER=tixiaozhu -e POSTGRES_PASSWORD=tixiaozhu_local_password -p 55432:5432 -v tixiaozhu-postgres-data:/var/lib/postgresql/data --health-cmd=\"pg_isready -U tixiaozhu -d tixiaozhu\" --health-interval=5s --health-timeout=3s --health-retries=12 postgres:16-alpine",
+    "db:local:stop": "docker stop tixiaozhu-postgres-local >/dev/null 2>&1 || true",
+    "db:local:reset": "docker rm -f tixiaozhu-postgres-local >/dev/null 2>&1 || true; docker volume rm tixiaozhu-postgres-data >/dev/null 2>&1 || true",
+    "db:local:logs": "docker logs -f tixiaozhu-postgres-local",
+    "db:export:file": "npm --prefix backend run store:export -- backend/data/pre-postgres-store-backup.json",
+    "db:import:local-postgres": "TIXIAOZHU_DATA_LAYER=postgres DATABASE_URL=postgres://tixiaozhu:tixiaozhu_local_password@127.0.0.1:55432/tixiaozhu TIXIAOZHU_DATABASE_TABLE=tixiaozhu_store npm --prefix backend run store:import -- backend/data/pre-postgres-store-backup.json",
+    "db:verify:local-postgres": "TIXIAOZHU_DATA_LAYER=postgres DATABASE_URL=postgres://tixiaozhu:tixiaozhu_local_password@127.0.0.1:55432/tixiaozhu TIXIAOZHU_DATABASE_TABLE=tixiaozhu_store npm --prefix backend run store:export -- backend/data/postgres-verify-export.json",
+    "audit:production-build": "npm run build && npm --prefix backend run audit:production-build",
+    "audit:runtime-security": "npm --prefix backend run audit:runtime-security",
+    "audit:commercial-launch": "npm --prefix backend run audit:commercial-launch",
+    "audit:launch-ui": "npm run build && npx playwright install chromium && npx playwright test backend/scripts/audit-launch-ui.spec.js --reporter=line",
+    "audit:interaction-qa": "npm run build && npx playwright install chromium && npx playwright test backend/scripts/audit-interaction-qa.spec.js --reporter=line",
+    "verify:ai": "npm --prefix backend run verify:ai",
+    "preflight:production": "npm --prefix backend run preflight:production",
+    "smoke:production": "npm --prefix backend run smoke:production",
+    "store:export": "npm --prefix backend run store:export",
+    "store:import": "npm --prefix backend run store:import",
+    "store:validate": "npm --prefix backend run store:validate"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}

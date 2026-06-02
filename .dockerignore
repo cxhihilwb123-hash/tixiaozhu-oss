@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+dist
+**/dist
+.DS_Store
+.env
+.env.*
+!.env.production.example
+backend/data
+backend/tmp
+npm-debug.log*

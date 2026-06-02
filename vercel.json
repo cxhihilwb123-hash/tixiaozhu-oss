@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install && npm --prefix frontend install && npm --prefix admin install && npm --prefix backend install",
+  "ignoreCommand": "node -e \"process.exit(process.env.ENABLE_VERCEL_AUTODEPLOY === 'true' ? 1 : 0)\"",
+  "outputDirectory": "frontend/dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "frontend/dist/**,admin/dist/**",
+      "maxDuration": 30
+    }
+  }
+}

@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: tixiaozhu-postgres-local
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: tixiaozhu
+      POSTGRES_USER: tixiaozhu
+      POSTGRES_PASSWORD: tixiaozhu_local_password
+    ports:
+      - "55432:5432"
+    volumes:
+      - tixiaozhu-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tixiaozhu -d tixiaozhu"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+volumes:
+  tixiaozhu-postgres-data:

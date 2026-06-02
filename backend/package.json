@@ -1,0 +1,30 @@
+{
+  "name": "tixiaozhu-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Node API, persistence, readiness gates, and audit scripts for Tixiaozhu.",
+  "license": "AGPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "health": "node -e \"fetch('http://127.0.0.1:8787/api/health').then(r=>r.json()).then(console.log)\"",
+    "audit:question-bank": "node scripts/audit-question-bank.js",
+    "audit:product-readiness": "node scripts/audit-product-readiness.js",
+    "audit:production-build": "node scripts/audit-production-build.js",
+    "audit:runtime-security": "node scripts/audit-runtime-security.js",
+    "audit:commercial-launch": "node scripts/audit-commercial-launch.js",
+    "verify:ai": "node scripts/verify-ai-provider.js",
+    "preflight:production": "node scripts/preflight-production.js",
+    "smoke:production": "node scripts/smoke-production.js",
+    "admin:hash-password": "node scripts/generate-admin-password-hash.js",
+    "store:export": "node scripts/export-store-snapshot.js",
+    "store:import": "node scripts/import-store-snapshot.js",
+    "store:validate": "node scripts/validate-store-snapshot.js",
+    "reset:store": "node scripts/reset-store.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "pg": "^8.20.0"
+  }
+}
