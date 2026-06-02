@@ -71,4 +71,4 @@ npm run audit:interaction-qa
 
 ## License
 
-Contributions are accepted under the same public license used by this repository: GNU Affero General Public License v3.0 or later. Proprietary commercial licensing may be offered separately by the copyright holder.
+Contributions are accepted under the same public license used by this repository: GNU Affero General Public License v3.0 or later. See [docs/license-faq.md](docs/license-faq.md) for a plain-language explanation. Proprietary commercial licensing may be offered separately by the copyright holder.

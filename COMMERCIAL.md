@@ -22,4 +22,6 @@ Examples that generally fit the public AGPL license:
 - Public forks, bug reports, documentation improvements, and learning demos.
 - Commercial deployment where the operator complies with AGPL source-code requirements.
 
+For common questions, see [docs/license-faq.md](docs/license-faq.md).
+
 This file is a plain-language summary. The binding license terms are in [LICENSE](LICENSE).
