@@ -8,6 +8,12 @@ Tixiaozhu is an open-source Chinese education-product engineering sample. It inc
 
 This repository is licensed under GNU Affero General Public License v3.0 or later. Commercial use is allowed under AGPL terms. If a company wants proprietary use without AGPL obligations, contact the copyright holder for a separate commercial license. See [LICENSE](LICENSE) and [COMMERCIAL.md](COMMERCIAL.md).
 
+## Contributors Wanted
+
+Tixiaozhu is looking for honest reviewers and small, practical contributors. Good first contributions include running the Quick Start, reporting setup gaps, reviewing the education flow, improving docs, testing accessibility, and tightening CI/audit coverage.
+
+Start here: [docs/join-the-project.md](docs/join-the-project.md).
+
 ## Highlights
 
 - Student React/Vite app with onboarding, practice center, question store, capture/manual-input correction, wrong-question workbench, and profile flows.
@@ -139,6 +145,8 @@ More detail: [docs/architecture.md](docs/architecture.md).
 API overview: [docs/api-reference.md](docs/api-reference.md).
 
 Visual walkthrough: [docs/demo.md](docs/demo.md).
+
+Contributor onboarding: [docs/join-the-project.md](docs/join-the-project.md).
 
 ## Environment Files
 
