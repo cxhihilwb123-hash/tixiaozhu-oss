@@ -1,5 +1,9 @@
 # Tixiaozhu
 
+[![OSS Launch Gates](https://github.com/cxhihilwb123-hash/tixiaozhu-oss/actions/workflows/launch-gates.yml/badge.svg)](https://github.com/cxhihilwb123-hash/tixiaozhu-oss/actions/workflows/launch-gates.yml)
+[![Release](https://img.shields.io/github/v/release/cxhihilwb123-hash/tixiaozhu-oss)](https://github.com/cxhihilwb123-hash/tixiaozhu-oss/releases)
+[![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
+
 Tixiaozhu is an open-source Chinese education-product engineering sample. It includes a student app, an operations admin app, and a Node API for primary-school practice, question banks, wrong-question review, manual capture correction, points, orders, launch gates, and production-readiness checks.
 
 This repository is licensed under GNU Affero General Public License v3.0 or later. Commercial use is allowed under AGPL terms. If a company wants proprietary use without AGPL obligations, contact the copyright holder for a separate commercial license. See [LICENSE](LICENSE) and [COMMERCIAL.md](COMMERCIAL.md).
