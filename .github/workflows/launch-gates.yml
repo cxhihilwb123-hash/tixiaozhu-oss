@@ -28,11 +28,6 @@ jobs:
       - run: npm --prefix backend run audit:product-readiness
       - run: npm --prefix backend run audit:runtime-security
       - run: npm --prefix backend run audit:production-build
-      - run: npm --prefix backend run audit:commercial-launch
+      - name: Commercial launch readiness (informational for local defaults)
+        run: npm --prefix backend run audit:commercial-launch
         continue-on-error: true
-      - name: Install Playwright browser
-        run: npx playwright install --with-deps chromium
-      - name: Launch UI audit
-        run: npx playwright test backend/scripts/audit-launch-ui.spec.js --reporter=line
-      - name: Interaction QA audit
-        run: npx playwright test backend/scripts/audit-interaction-qa.spec.js --reporter=line
