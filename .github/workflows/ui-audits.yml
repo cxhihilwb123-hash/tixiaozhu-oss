@@ -1,0 +1,26 @@
+name: Manual UI Audits
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ui-audits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm --prefix frontend ci
+      - run: npm --prefix admin ci
+      - run: npm --prefix backend ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Launch UI audit
+        run: npx playwright test backend/scripts/audit-launch-ui.spec.js --reporter=line
+        continue-on-error: true
+      - name: Interaction QA audit
+        run: npx playwright test backend/scripts/audit-interaction-qa.spec.js --reporter=line
+        continue-on-error: true
