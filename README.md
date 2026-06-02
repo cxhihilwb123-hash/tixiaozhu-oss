@@ -14,6 +14,8 @@ Tixiaozhu is looking for honest reviewers and small, practical contributors. Goo
 
 Start here: [docs/join-the-project.md](docs/join-the-project.md).
 
+Useful contributions may receive public recognition or optional maintainer-confirmed thank-you rewards. See [docs/contributor-rewards.md](docs/contributor-rewards.md).
+
 ## Highlights
 
 - Student React/Vite app with onboarding, practice center, question store, capture/manual-input correction, wrong-question workbench, and profile flows.
@@ -147,6 +149,8 @@ API overview: [docs/api-reference.md](docs/api-reference.md).
 Visual walkthrough: [docs/demo.md](docs/demo.md).
 
 Contributor onboarding: [docs/join-the-project.md](docs/join-the-project.md).
+
+Contributor rewards: [docs/contributor-rewards.md](docs/contributor-rewards.md).
 
 ## Environment Files
 

@@ -4,6 +4,8 @@ Thanks for taking a look at Tixiaozhu. The project is open source under AGPL-3.0
 
 New contributors should start with [docs/join-the-project.md](docs/join-the-project.md). It lists reviewer roles, good first tasks, and how to introduce yourself.
 
+Useful contributions may receive public recognition or optional maintainer-confirmed thank-you rewards. See [docs/contributor-rewards.md](docs/contributor-rewards.md).
+
 ## What Helps Most
 
 - Improve setup docs, API docs, and production-readiness notes.

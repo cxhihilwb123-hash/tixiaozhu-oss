@@ -79,6 +79,12 @@ I can help with:
 
 No formal application is needed for small contributions. Pull requests and honest issues are the best introduction.
 
+## Recognition And Rewards
+
+Useful contributions may receive public recognition, release-note mentions, contributor highlights, maintainer-track consideration, or optional thank-you rewards when explicitly confirmed by the maintainer.
+
+See [Contributor Rewards](contributor-rewards.md).
+
 ## Ground Rules
 
 - Honest critique is more useful than praise.
