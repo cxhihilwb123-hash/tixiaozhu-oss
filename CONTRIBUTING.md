@@ -10,6 +10,8 @@ Thanks for taking a look at Tixiaozhu. The project is open source under AGPL-3.0
 - Improve accessibility, mobile layout, and empty/error states.
 - Improve question-bank quality checks and teaching-content coverage.
 
+Question-bank contributors should also read [docs/question-bank-contributing.md](docs/question-bank-contributing.md).
+
 ## Local Setup
 
 Install dependencies in each workspace:
