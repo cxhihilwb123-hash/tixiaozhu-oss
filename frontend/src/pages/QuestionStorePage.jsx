@@ -56,6 +56,21 @@ const recommendationBadge = (level) => ({
   normal: '可选练',
 }[level] || '可选练')
 
+const packKnowledgeHint = (pack) => (
+  pack.coverage ||
+  pack.unitName ||
+  pack.structure ||
+  (pack.series === 'textbook' ? '教材同步知识点' : '主科训练知识点')
+)
+
+const packFitHint = (pack) => {
+  if (pack.recommendation?.reasons?.length > 0) return pack.recommendation.reasons[0]
+  if (pack.series === 'textbook') return '适合同步巩固课堂单元'
+  if (pack.series === 'special') return '适合集中处理薄弱能力'
+  if (pack.series === 'paper') return '适合阶段检测和考前复盘'
+  return '适合按今天练习目标补题'
+}
+
 const normalizePack = (pack) => ({
   ...pack,
   subjectValue: subjectValueByName[pack.subject] || pack.subject || 'math',
@@ -377,7 +392,9 @@ const QuestionStorePage = ({ onBack, onRequireLogin, onStartPractice }) => {
             ['积分余额', pointsAccount.balance || 0],
           ].map(([label, value]) => (
             <div key={label} className="surface-line rounded-card bg-white p-3 text-center">
-              <div className="text-title-2 text-neutral-900">{value}</div>
+              <div className="text-title-2 text-neutral-900">
+                {label === '积分余额' ? `${value} 积分` : `${value} 个题包`}
+              </div>
               <div className="mt-1 text-caption-1 text-neutral-500">{label}</div>
             </div>
           ))}
@@ -611,6 +628,16 @@ const QuestionStorePage = ({ onBack, onRequireLogin, onStartPractice }) => {
                             {pack.series === 'textbook' ? `${pack.semester || ''}${pack.unitName ? ` · ${pack.unitName}` : ''}` : pack.coverage || pack.unitName || '按训练目标组织'}
                           </p>
                           <p className="mt-1 text-caption-1 text-neutral-500">{pack.structure || pack.description || '按题包顺序完成一轮训练。'}</p>
+                          <div className="mt-3 grid gap-2 text-caption-1 text-neutral-600">
+                            <div className="rounded-card bg-primary-50 p-2">
+                              <span className="font-semibold text-primary-800">覆盖知识点：</span>
+                              {packKnowledgeHint(pack)}
+                            </div>
+                            <div className="rounded-card bg-neutral-50 p-2">
+                              <span className="font-semibold text-neutral-700">适合情况：</span>
+                              {packFitHint(pack)}
+                            </div>
+                          </div>
                           {pack.recommendation?.reasons?.length > 0 && (
                             <div className="mt-3 rounded-card bg-amber-50 p-3">
                               <div className="mb-2 flex items-center gap-2 text-caption-1 font-semibold text-amber-800">

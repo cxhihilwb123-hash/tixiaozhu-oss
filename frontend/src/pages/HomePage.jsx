@@ -156,22 +156,23 @@ const HomePage = ({ onStartPractice, onContinuePractice, onStartWrongPractice, o
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
           className="mb-6 rounded-card bg-neutral-900 p-5 text-white"
-          data-testid="home-question-store-cta"
         >
-          <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div className="mb-2 flex items-center gap-2 text-caption-1 text-primary-100">
-                <ShoppingBag size={15} />
-                题库商城
-              </div>
-              <h2 className="text-title-1">按教材同步、专项训练和试卷解锁题包</h2>
-              <p className="mt-2 max-w-2xl text-subhead text-white/68">
-                免费题包可直接练，积分题包购买后进入“我的题库”，适合家长按单元和薄弱点安排打印练习。
-              </p>
+              <div className="text-caption-1 text-white/60">学习路径</div>
+              <h2 className="mt-1 text-title-1">今天先完成推荐，再处理错题</h2>
             </div>
-            <Button onClick={onOpenQuestionStore} className="bg-white text-neutral-900 hover:bg-white/90">
-              去题库商城
-            </Button>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
+              <ArrowRight size={19} />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-2 text-center sm:grid-cols-4">
+            {['今日推荐练习', '拍题/手动录入', '错题回收', '缺题时补题包'].map((step, index) => (
+              <div key={step} className="rounded-card bg-white/10 px-2 py-3">
+                <div className="text-title-2">{index + 1}</div>
+                <div className="mt-1 text-caption-1 text-white/68">{step}</div>
+              </div>
+            ))}
           </div>
         </motion.section>
 
@@ -261,24 +262,23 @@ const HomePage = ({ onStartPractice, onContinuePractice, onStartWrongPractice, o
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.24 }}
-          className="mb-6 rounded-card bg-neutral-900 p-5 text-white"
+          className="mb-6 rounded-card bg-white p-5"
+          data-testid="home-question-store-cta"
         >
-          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="grid gap-4 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
-              <div className="text-caption-1 text-white/60">学习节奏</div>
-              <h2 className="mt-1 text-title-1">先完成推荐，再处理错题</h2>
-            </div>
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
-              <ArrowRight size={19} />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 gap-2 text-center sm:grid-cols-3">
-            {['推荐练习', '即时批改', '错题回收'].map((step, index) => (
-              <div key={step} className="rounded-card bg-white/10 px-2 py-3">
-                <div className="text-title-2">{index + 1}</div>
-                <div className="mt-1 text-caption-1 text-white/68">{step}</div>
+              <div className="mb-2 flex items-center gap-2 text-caption-1 text-primary-700">
+                <ShoppingBag size={15} />
+                题库商城
               </div>
-            ))}
+              <h2 className="text-title-1 text-neutral-900">需要更多题时，再补充题包</h2>
+              <p className="mt-2 max-w-2xl text-subhead text-neutral-500">
+                免费题包可直接练，积分题包购买后进入“我的题库”，适合家长按单元和薄弱点安排打印练习。
+              </p>
+            </div>
+            <Button onClick={onOpenQuestionStore}>
+              去题库商城
+            </Button>
           </div>
         </motion.section>
 

@@ -4,7 +4,7 @@
 [![Release](https://img.shields.io/github/v/release/cxhihilwb123-hash/tixiaozhu-oss)](https://github.com/cxhihilwb123-hash/tixiaozhu-oss/releases)
 [![License: AGPL-3.0-or-later](https://img.shields.io/badge/license-AGPL--3.0--or--later-blue.svg)](LICENSE)
 
-Tixiaozhu is an open-source Chinese education-product engineering sample. It includes a student app, an operations admin app, and a Node API for primary-school practice, question banks, wrong-question review, manual capture correction, points, orders, launch gates, and production-readiness checks.
+Tixiaozhu is an open-source Chinese education-product engineering sample. It includes a student app, an operations admin app, and a Node API for primary-school practice, question banks, wrong-question review, manual capture correction, points, orders, launch gates, and production-readiness checks. The student flow is designed around a daily learning path: finish today's recommended practice, capture or enter extra questions when needed, recycle wrong questions, and use the question store only when more targeted packs are needed.
 
 This repository is licensed under GNU Affero General Public License v3.0 or later. Commercial use is allowed under AGPL terms. If a company wants proprietary use without AGPL obligations, contact the copyright holder for a separate commercial license. See [LICENSE](LICENSE) and [COMMERCIAL.md](COMMERCIAL.md).
 
@@ -18,7 +18,7 @@ Useful contributions may receive public recognition or optional maintainer-confi
 
 ## Highlights
 
-- Student React/Vite app with onboarding, practice center, question store, capture/manual-input correction, wrong-question workbench, and profile flows.
+- Student React/Vite app with onboarding, daily recommended practice, capture/manual-input correction, wrong-question recycling, a practice center, question-store fallback, and profile flows.
 - Admin React/Vite app with login, dashboard, users, question packs, knowledge points, AI generation, learning records, billing, points, orders, refunds, and system settings.
 - Node API with student/admin auth, local file persistence, PostgreSQL JSONB snapshot support, payment state flows, webhook verification, AI/OCR strategy gates, and static app serving.
 - Question-bank product structure for primary-school Chinese, math, and English.
@@ -151,6 +151,8 @@ Visual walkthrough: [docs/demo.md](docs/demo.md).
 Contributor onboarding: [docs/join-the-project.md](docs/join-the-project.md).
 
 Contributor rewards: [docs/contributor-rewards.md](docs/contributor-rewards.md).
+
+Recent external feedback: [docs/release-notes-v0.1.1.md](docs/release-notes-v0.1.1.md).
 
 ## Environment Files
 
