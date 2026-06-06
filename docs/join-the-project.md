@@ -29,6 +29,9 @@ Best starting point:
 3. Open an issue with one clear setup, docs, or UX improvement.
 4. Pick a `good first issue` only after you can run the project locally.
 
+For a docs-only first pull request, keep the change to one focused file when possible.
+In the PR description, say what you clarified and whether you ran local checks or only reviewed the Markdown.
+
 Useful labels:
 
 - `good first issue`
